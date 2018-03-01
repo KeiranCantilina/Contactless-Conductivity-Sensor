@@ -115,7 +115,7 @@ void loop() { // For whatever the reason, frequency values must be floats. IDK W
 //Calibration curve function for 0.8 Mhz readings (to the left of the global min)
 float FORMULA_LOW_LEFT(float reading){
   float result;
-  result = (-3.068013237*pow(10,-2)*pow(reading,2) + (87.35052939*reading) - 969.4326833) / (reading - 2618.305948);
+  result = -12.34904 + (434873600 - -12.34904)/(1 + pow((reading/2007.436),50.1506));
   return result;
 }
 
@@ -123,7 +123,7 @@ float FORMULA_LOW_LEFT(float reading){
 //Calibration curve function for 0.8 Mhz readings (to the right of the global min)
 float FORMULA_LOW_RIGHT(float reading){
   float result;
-  result = pow(10,-5)*pow(reading,5) - 0.1339*pow(reading,4) + 730.58*pow(reading,3) - (2*pow(10,6))*(pow(reading,2)) + 3*pow(10,9)*reading - pow(10,12);
+  result = 5519769000 + (662.6475 - 5519769000)/(1 + pow((reading/2980.706),209.2922));
   return result;
 }
 
@@ -131,7 +131,7 @@ float FORMULA_LOW_RIGHT(float reading){
 //Calibration curve function for 1.52 Mhz readings (to the left of the global min)
 float FORMULA_HIGH_LEFT(float reading){
   float result;
-  result = 0.0259*pow(reading,2) - 108.58*reading + 113780;
+  result = -7.41893 + (1417376000 - -7.41893)/(1 + pow((reading/1268.223),34.79597));
   return result;
 }
 
@@ -139,6 +139,6 @@ float FORMULA_HIGH_LEFT(float reading){
 //Calibration curve function for 1.52 Mhz readings (to the right of the global min)
 float FORMULA_HIGH_RIGHT(float reading){
   float result;
-  result = (float) (5*pow(10,5)*pow(reading,4)) - (0.4287*pow(reading,3)) + 1262.9*pow(reading,2) - (2*pow(10,6)*reading) + 8*(pow(10,8));
+  result = 4244895000 + (841.1226 - 4244895000)/(1 + pow((reading/2563.831),61.0802));
   return result;
 }
