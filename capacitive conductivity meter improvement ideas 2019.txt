@@ -1,0 +1,6 @@
+To improve conductivity sensor:
+
+Remember that this is basically a transmitter and reciever pair, with attenuation between them reliant on the conductivity of the water.
+Test "antenna" designs and operating frequencies to find a more linearly-behaving setup.
+
+For capacitance-based approaches, try http://www.techlib.com/electronics/c_beeper.html
